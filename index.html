@@ -1,47 +1,66 @@
-<body style='background-color:White'>
-
-   <html><head><title>FREE</title> <meta name="viewport" content="width=device-width"><style>
-input[type=text],[type=number], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}input[type=submit] {
-    width: 60%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;}input[type=submit]:hover {
-    background-color: #45a049;}div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}.error {background:#ffebe8; border:1px solid #dd3c10; padding:2px; text-align:center; font-weight:normal; color:maroon;}.success {background:#fff8cc; border:1px solid #ffe222; padding:10px; text-align:center; font-weight:normal; color:#000;}</head>
-
-</style></head><title></title><body><center><b><font color='black' size='3'><hr>Loot<center><hr>
-
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FREE</title>
+    <style>
+        input[type=text], input[type=number], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+}
+        input[type=password], input[type=submit] {
+            width: 100%;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border-radius: 4px;
+            box-sizing: border-box;
+}
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+}
+        input[type=submit]:hover {
+            background-color: #45a049;
+}
+.error {
+            background: #ffebe8;
+            border: 1px solid #dd3c10;
+            padding: 2px;
+            text-align: center;
+            color: maroon;
+}
+.success {
+            background: #fff8cc;
+            border: 1px solid #ffe222;
+            padding: 10px;
+            text-align: center;
+            color: black;
+}
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+<body>
+    <div style="border-radius:5px; background-color:#f2f2f2; padding:20px;">
+        <h3 style="text-align:center; color:black;">Loot</h3>
+        <hr>
+        <form action="/submit" method="post" autocomplete="off">
+            <label for="mo">Enter Your Register Number:</label>
+            <input type="text" id="mo" name="mo" placeholder="Enter Your Register Number" required />
 
+            <div class="g-recaptcha" data-sitekey="6Ld_JVErAAAAAGrv3TIv_6GzB4eZf_PIRMhJBfhO"></div>
 
+            <label for="refer">Enter Your Password:</label>
+            <input type="password" id="refer" name="refer" placeholder="Enter Your Password" required />
 
-    <form action="#" method="get" autocomplete="off">
-        <center>
-            <br><input type="text" name="mo" placeholder="Enter Your Register Number" required /><br><br>
-            
-            <div class="g-recaptcha" 
-                 data-sitekey="6Ld_JVErAAAAAGrv3TIv_6GzB4eZf_PIRMhJBfhO" 
-                 data-callback="recaptchaCallback" 
-                 data-expired-callback="recaptchaExpired">
-            </div><br>
-
-            <input type="text" name="refer" placeholder="Enter Your Password" required /><br><br>
             <input type="submit" name="submit" value="SUBMIT">
-        </center>
-    </form>
+        </form>
+    </div>
+</body>
+</html>
